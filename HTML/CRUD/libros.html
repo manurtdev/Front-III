@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libros CRUD</title>
+    <link rel="stylesheet" href="../../CSS/crud.css" />
+    <link rel="icon" href="../../Imagenes/LogoOscuro-02.png" />
+  </head>
+
+  <body>
+    <main class="container">
+      <section class="crud-section">
+        <h2>Gestión de Libros</h2>
+
+        <form id="form-libros">
+          <input type="hidden" id="libro-id" />
+
+          <input
+            type="text"
+            id="libro-titulo"
+            placeholder="Título del libro"
+            required
+          />
+          <input
+            type="number"
+            id="libro-cantidad-total"
+            placeholder="Cantidad total"
+            required
+          />
+          <input
+            type="number"
+            id="libro-cantidad-disponible"
+            placeholder="Cantidad disponible"
+            required
+          />
+          <input
+            type="number"
+            id="libro-genero"
+            placeholder="ID Género"
+            required
+          />
+
+          <button type="submit">Guardar</button>
+          <button type="button" onclick="limpiarFormulario('form-libros')">
+            Cancelar
+          </button>
+        </form>
+
+        <div id="lista-libros" class="lista-items"></div>
+      </section>
+    </main>
+
+    <script src="../../JS/libros.js"></script>
+  </body>
+</html>

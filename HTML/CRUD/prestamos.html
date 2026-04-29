@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Préstamos CRUD</title>
+    <link rel="stylesheet" href="../../CSS/crud.css" />
+    <link rel="icon" href="../../Imagenes/LogoOscuro-02.png" />
+  </head>
+
+  <body>
+    <main class="container">
+      <section class="crud-section">
+        <h2>Gestión de Préstamos</h2>
+
+        <form id="form-prestamos">
+          <input type="hidden" id="prestamo-id" />
+
+          <input
+            type="number"
+            id="prestamo-usuario"
+            placeholder="ID Usuario"
+            required
+          />
+          <input
+            type="number"
+            id="prestamo-libro"
+            placeholder="ID Libro"
+            required
+          />
+          <input
+            type="date"
+            id="prestamo-fecha"
+            placeholder="Fecha del préstamo"
+            required
+          />
+          <input
+            type="date"
+            id="prestamo-fecha-esperada"
+            placeholder="Fecha devolución esperada"
+            required
+          />
+          <input
+            type="date"
+            id="prestamo-fecha-real"
+            placeholder="Fecha devolución real"
+          />
+          <input
+            type="text"
+            id="prestamo-estado"
+            placeholder="Estado del préstamo"
+            required
+          />
+
+          <button type="submit">Guardar</button>
+          <button type="button" onclick="limpiarFormulario('form-prestamos')">
+            Cancelar
+          </button>
+        </form>
+
+        <div id="lista-prestamos" class="lista-items"></div>
+      </section>
+    </main>
+
+    <script src="../../JS/prestamos.js"></script>
+  </body>
+</html>

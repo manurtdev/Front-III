@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+:root {
+    --Canela: #91735d;
+    --Crema: #d1b7a0;
+
+
+    --Beige: #e9d4c1;
+    --Claro: #f7f1ed;
+    --Blanco: #f3e5da;
+    --ColorTexto: #1f1814;
+    --tipografiaPPAL: "Montserrat", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--tipografiaPPAL);
+}
+
+body {
+    background-image: url('../Imagenes/fondo-con-textura-de-papel.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    align-content: center;
+    display: grid;
+    margin: 5rem;
+    padding: 2rem;
+    border-radius: 24px;
+    background-color: var(--Blanco);
+    box-shadow: 0 2px 5px var(--Canela);
+}
+
+.crud-section {
+   margin: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+textarea,
+select,
+button {
+    padding: 10px;
+    border: 1px solid var(--Crema);
+    border-radius: 4px;
+    margin: 1rem 0.5rem;
+}
+
+button {
+    cursor: pointer;
+    background-color: var(--Crema);
+    color: var(--ColorTexto);
+    border: solid 1px var(--Canela);
+    font-weight: 600;
+    margin: 0.5rem;
+    transition: 0.2 2s;
+}
+
+button[type="button"] {
+    background-color: var(--Canela);
+}
+
+button:hover{
+    box-shadow: 0 2px 5px var(--Canela);
+}
+
+.lista-items div {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

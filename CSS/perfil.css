@@ -1,0 +1,187 @@
+ @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+:root {
+  --Canela: #91735d;
+  --Crema: #d1b7a0;
+
+
+  --Beige: #e9d4c1;
+  --Claro: #f7f1ed;
+  --Blanco: #f3e5da;
+  --ColorTexto: #1f1814;
+  --tipografiaPPAL: "Montserrat", sans-serif;
+}
+ * {
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    background-image: url('../Imagenes/fondo-con-textura-de-papel.jpg');
+
+  }
+
+
+  /*header*/
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f1edce;
+    border-radius: 100px;
+    margin: 1rem 4rem;
+    height: 70px;
+    position: sticky;
+    z-index: 100;
+  }
+
+  .HeadIzq {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 30%;
+  }
+
+  #LogoHeader {
+    width: auto;
+    height: 50px;
+    float: left;
+    margin: 30px;
+  }
+
+  #LogoHeader:hover {
+    width: auto;
+    height: 55px;
+    transition: 0.5s;
+    float: left;
+    margin: 30px;
+    cursor: pointer;
+  }
+
+  .EntreLineas {
+    float: left;
+    font-family: var(--tipografiaPPAL);
+    color: var(--ColorTexto);
+    font-size: large;
+    font-weight: 500;
+  }
+
+  nav {
+    padding: 0.5em 2em;
+    font-family: var(--tipografiaPPAL);
+    width: 20%;
+    margin: 0 2rem;
+  }
+
+  #MenuInicio {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5em;
+  }
+
+  .ItemInicio a {
+    text-decoration: none;
+    color: var(--ColorTexto);
+    font-size: large;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+
+  .ItemInicio a:hover {
+    background-color: var(--Beige);
+    height: 50px;
+    width: auto;
+    padding: 0 5px;
+    border-radius: 100px;
+  }
+
+  /*main*/
+  main{
+    width: auto;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+
+.perfil-container {
+  width: 80%;
+  height: auto;
+  background-color: #f7f1edce;
+  border-radius: 12px;
+  margin:  4rem;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.perfil-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  margin-bottom: 2rem;
+  background-color: var(--Beige);
+  border-radius: 12px;
+}
+
+.foto-perfil {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  object-fit: contain;
+  margin: 1rem;
+}
+
+#nombreUsuario {
+  font-family: var(--tipografiaPPAL);
+  color: var(--ColorTexto);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.acciones{
+  width: 30%;
+  margin: auto 0 auto 12rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+.btn {
+  display: block;
+  background-color: var(--Claro);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--Crema);
+  transition: transform 0.3s ease;
+  margin: 1rem 0;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.btn:hover {
+   transform: translateY(-5px);
+  box-shadow: 0 4px 12px var(--Canela);
+}
+
+
+#accionesEspecificas{
+  height: 13%;
+  display: flex;
+  justify-content: space-around;
+   flex-wrap: wrap;
+}
+
+
+

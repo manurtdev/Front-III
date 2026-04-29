@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usuarios CRUD</title>
+    <link rel="stylesheet" href="../../CSS/crud.css" />
+    <link rel="icon" href="../../Imagenes/LogoOscuro-02.png" />
+  </head>
+
+  <body>
+    <main class="container">
+      <section class="crud-section">
+        <h2>Gestión de Usuarios</h2>
+
+        <form id="form-usuarios">
+          <input type="number" id="usuario-id" placeholder="Identificacion" required />
+
+          <input
+            type="text"
+            id="usuario-nombre"
+            placeholder="Nombre del usuario"
+            required
+          />
+          <input
+            type="text"
+            id="usuario-telefono"
+            placeholder="Teléfono"
+            required
+          />
+          <input
+            type="email"
+            id="usuario-email"
+            placeholder="Correo electrónico"
+            required
+          />
+          <select id="usuario-escuela" required>
+            <option value="" disabled selected>-</option>
+          </select>
+
+          <select id="usuario-rol" required>
+            <option value="" disabled selected>-</option>
+          </select>
+          <button type="submit">Guardar</button>
+          <button type="button" onclick="limpiarFormulario('form-usuarios')">
+            Cancelar
+          </button>
+        </form>
+
+        <div id="lista-usuarios" class="lista-items"></div>
+      </section>
+    </main>
+
+    <script src="../../JS/usuarioscrud.js"></script>
+  </body>
+</html>

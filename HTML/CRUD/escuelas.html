@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escuelas CRUD</title>
+    <link rel="stylesheet" href="../../CSS/crud.css" />
+    <link rel="icon" href="../../Imagenes/LogoOscuro-02.png" />
+  </head>
+
+  <body>
+    <main class="container">
+      <section class="crud-section">
+        <h2>Gestión de Escuelas</h2>
+
+        <form id="form-escuelas">
+          <input type="hidden" id="escuela-id" />
+
+          <input
+            type="text"
+            id="escuela-nombre"
+            placeholder="Nombre de la escuela"
+            required
+          />
+
+          <button type="submit">Guardar</button>
+          <button type="button" onclick="limpiarFormulario('form-escuelas')">
+            Cancelar
+          </button>
+        </form>
+
+        <div id="lista-escuelas" class="lista-items"></div>
+      </section>
+    </main>
+
+    <script src="../../JS/escuelas.js"></script>
+  </body>
+</html>

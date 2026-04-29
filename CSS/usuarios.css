@@ -1,0 +1,858 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+:root {
+  --Canela: #91735d;
+  --Crema: #d1b7a0;
+  --Beige: #e9d4c1;
+  --Claro: #f7f1ed;
+  --Blanco: #f3e5da;
+  --ColorTexto: #1f1814;
+  --tipografiaPPAL: "Montserrat", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url('../Imagenes/fondo-con-textura-de-papel.jpg');
+
+}
+
+@media (min-width: 1100px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    background-image: url('../Imagenes/fondo-con-textura-de-papel.jpg');
+
+  }
+
+  /*header*/
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f1edde;
+    border-radius: 100px;
+    margin: 1rem 4rem;
+    height: 70px;
+    position: sticky;
+    z-index: 100;
+  }
+
+  .HeadIzq {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 30%;
+  }
+
+  #LogoHeader {
+    width: auto;
+    height: 50px;
+    float: left;
+    margin: 30px;
+  }
+
+  #LogoHeader:hover {
+    width: auto;
+    height: 55px;
+    transition: 0.5s;
+    float: left;
+    margin: 30px;
+    cursor: pointer;
+  }
+
+  .EntreLineas {
+    float: left;
+    font-family: var(--tipografiaPPAL);
+    color: var(--ColorTexto);
+    font-size: large;
+    font-weight: 500;
+  }
+
+  nav {
+    padding: 0.5em 2em;
+    font-family: var(--tipografiaPPAL);
+    width: 20%;
+    margin: 0 2rem;
+  }
+
+  #MenuInicio {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5em;
+  }
+
+  .ItemInicio a {
+    text-decoration: none;
+    color: var(--ColorTexto);
+    font-size: large;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+
+  .ItemInicio a:hover {
+    background-color: var(--Beige);
+    height: 50px;
+    width: auto;
+    padding: 0 5px;
+    border-radius: 100px;
+  }
+
+  /*carrito de compras*/
+
+  #carrito {
+    font-size: 3rem;
+    color: var(--Blanco);
+    background-color: var(--Canela);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 0.5rem;
+    border-radius: 100%;
+    box-shadow: 0 4px 12px var(--Canela);
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.3s ease;
+  }
+
+  #carrito:hover{
+     transform: translateY(-5px);
+    box-shadow: 0 4px 12px var(--Canela);
+  }
+
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #91735da9;
+  }
+
+  .modalContenido {
+    background-color: var(--Blanco);
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 60%;
+    box-shadow: 0 4px 12px var(--Crema);
+    font-family: var(--tipografiaPPAL);
+  }
+
+  .cerrarModal {
+    color: var(--ColorTexto);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .cerrarModal:hover {
+    color: var(--Canela);
+  }
+
+  .btnAgregar {
+    height: 3rem;
+    width: 3rem;
+    background-color: var(--Claro);
+    border-radius: 100%;
+    padding: 0.8rem;
+    box-shadow: 0 4px 12px var(--Crema);
+    transition: transform 0.3s ease;
+    border: none;
+  }
+
+  .btnAgregar:hover{
+     transform: translateY(2px);
+    box-shadow: 0 4px 12px var(--Canela);
+  }
+
+  .titulo-prestamo{ 
+    margin: 1rem;
+  }
+
+  .aviso{
+    margin: 1rem;
+  }
+
+  .boton-cantidad{
+    background-color: var(--Crema);
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: medium;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 2px 2px var(--Canela);
+  }
+
+  .boton-cantidad:hover{
+    background-color: var(--Crema);
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: medium;
+    font-weight: 600;
+    border: solid 1px var(--Canela);
+    border-radius: 12px;
+    box-shadow: 0 2px 2px 2px var(--Canela);
+  }
+
+
+  /*mas buscados y de interes*/
+  .conttitulo {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: left;
+    margin: 0;
+  }
+
+  .titulomasbuscados {
+    font-size: x-large;
+    font-family: var(--tipografiaPPAL);
+    color: var(--ColorTexto);
+    font-weight: 600;
+    margin: 0 8rem;
+  }
+
+  #masbuscados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px;
+    border-radius: 0 0 100px 100px;
+    margin-top: 0;
+    z-index: 100;
+  }
+
+  .contenedorlibro {
+    width: 235px;
+    background-color: var(--Claro);
+    border-radius: 12px;
+    box-shadow: 0 2px 6px var(--Crema);
+    text-align: center;
+    padding: 15px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contenedorimg {
+    position: relative;
+    width: 150px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 12px;
+  }
+
+  .contenedorimg:hover {
+    box-shadow: 0 2px 6px var(--Crema);
+  }
+
+  .imglibro {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    transform-origin: center center;
+  }
+
+  .imglibro:hover {
+    transform: scale(1.1);
+
+  }
+
+  .titulolibro {
+    font-size: medium;
+    font-family: var(--tipografiaPPAL);
+    font-weight: 600;
+    margin: 5px;
+  }
+
+  .autor {
+    font-size: small;
+    font-family: var(--tipografiaPPAL);
+    font-weight: 500;
+    margin: 5px;
+  }
+
+  .escuelalibro {
+    font-size: x-small;
+    font-family: var(--tipografiaPPAL);
+    font-weight: 600;
+    margin: 5px;
+  }
+
+  .tituloescuela {
+    padding: 1rem;
+    font-family: var(--tipografiaPPAL);
+    color: var(--ColorTexto);
+    font-size: x-large;
+    font-weight: 600;
+    margin: 1rem auto 1rem 8rem;
+    height: 30px;
+  }
+
+  #deInteres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px;
+    border-radius: 0 0 100px 100px;
+    margin-top: 0;
+    z-index: 100;
+  }
+
+  /*Escuelas*/
+  #escuelas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+    justify-content: center;
+    margin: 0 10rem;
+  }
+
+  .contescuelas {
+    background-color: var(--Claro);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px var(--Crema);
+    transition: transform 0.3s ease;
+  }
+
+  .contescuelas:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px var(--Canela);
+  }
+
+  .tituloescuelas {
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--ColorTexto);
+    font-family: var(--tipografiaPPAL);
+  }
+
+  .descrescuelas {
+    color: var(--ColorTexto);
+    line-height: 1.1;
+    font-family: var(--tipografiaPPAL);
+    font-size: small;
+  }
+
+}
+
+@media (max-width: 1099px) and (min-width:490px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f1edde;
+    border-radius: 100px;
+    margin: 1rem;
+    height: 50px;
+    position: sticky;
+    z-index: 100;
+  }
+
+  .HeadIzq {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 50px;
+    width: 50%;
+    top: 0;
+  }
+
+  #LogoHeader {
+    width: auto;
+    height: 30px;
+    float: left;
+    margin: 20px;
+  }
+
+  #LogoHeader:hover {
+    width: auto;
+    height: 55px;
+    transition: 0.5s;
+    float: left;
+    margin: 20px;
+    cursor: pointer;
+  }
+
+  .EntreLineas {
+    float: left;
+    font-family: var(--tipografiaPPAL);
+    color: var(--ColorTexto);
+    font-size: medium;
+    font-weight: 500;
+  }
+
+  nav {
+    font-family: var(--tipografiaPPAL);
+    width: 50%;
+    margin: 0 10px 0 0;
+    display: flex;
+  }
+
+  #MenuInicio {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .ItemInicio a {
+    text-decoration: none;
+    color: var(--ColorTexto);
+    font-size: medium;
+    font-weight: 500;
+    display: flex;
+    margin: 0 14px 0 0;
+  }
+
+  .ItemInicio a:hover {
+    background-color: var(--Beige);
+    height: 50px;
+    width: auto;
+    padding: 0 5px;
+    border-radius: 100px;
+  }
+
+  .conttitulo {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: left;
+    margin: 0;
+  }
+
+  .titulomasbuscados {
+    font-size: x-large;
+    font-family: var(--tipografiaPPAL);
+    color: var(--ColorTexto);
+    font-weight: 600;
+    margin: 0 8rem 0 2rem;
+  }
+
+  #masbuscados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px;
+    border-radius: 0 0 100px 100px;
+    margin-top: 0;
+  }
+
+  .contenedorlibro {
+    width: 150px;
+    background-color: var(--Claro);
+    border-radius: 12px;
+    box-shadow: 0 2px 6px var(--Crema);
+    text-align: center;
+    padding: 15px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contenedorimg {
+    position: relative;
+    width: 150px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 12px;
+  }
+
+  .contenedorimg:hover {
+    box-shadow: 0 2px 6px var(--Crema);
+  }
+
+  .imglibro {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    transform-origin: center center;
+  }
+
+  .imglibro:hover {
+    transform: scale(1.1);
+
+  }
+
+  .titulolibro {
+    font-size: medium;
+    font-family: var(--tipografiaPPAL);
+    font-weight: 600;
+    margin: 5px;
+  }
+
+  .autor {
+    font-size: small;
+    font-family: var(--tipografiaPPAL);
+    font-weight: 500;
+    margin: 5px;
+  }
+
+  .escuelalibro {
+    font-size: x-small;
+    font-family: var(--tipografiaPPAL);
+    font-weight: 600;
+    margin: 5px;
+  }
+
+  .tituloescuela {
+    padding: 1rem;
+    font-family: var(--tipografiaPPAL);
+    color: var(--ColorTexto);
+    font-size: x-large;
+    font-weight: 600;
+    margin: 2rem auto 1rem 2rem;
+    height: 30px;
+  }
+
+  #deInteres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px;
+    border-radius: 0 0 100px 100px;
+    margin-top: 0;
+  }
+
+
+  /*Escuelas*/
+  #escuelas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+    margin: 0 10rem;
+  }
+
+  .contescuelas {
+    background-color: var(--Claro);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px var(--Crema);
+    transition: transform 0.3s ease;
+  }
+
+  .contescuelas:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px var(--Canela);
+  }
+
+  .tituloescuelas {
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--ColorTexto);
+    font-family: var(--tipografiaPPAL);
+  }
+
+  .descrescuelas {
+    color: var(--ColorTexto);
+    line-height: 1.1;
+    font-family: var(--tipografiaPPAL);
+    font-size: small;
+  }
+
+}
+
+@media (max-width: 489px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    background-image: url('../Imagenes/fondo-con-textura-de-papel.jpg');
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f1edde;
+    border-radius: 100px;
+    margin: 1rem;
+    height: auto;
+    position: sticky;
+    z-index: 100;
+  }
+
+  .HeadIzq {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 50px;
+    width: 50%;
+    top: 0;
+  }
+
+  #LogoHeader {
+    width: auto;
+    height: 20px;
+    float: left;
+    margin: 10px;
+  }
+
+  #LogoHeader:hover {
+    width: auto;
+    height: 25px;
+    transition: 0.5s;
+    float: left;
+    margin: 20px;
+    cursor: pointer;
+  }
+
+  .EntreLineas {
+    float: left;
+    font-family: var(--tipografiaPPAL);
+    color: var(--ColorTexto);
+    font-size: smaller;
+    font-weight: 500;
+  }
+
+  nav {
+    font-family: var(--tipografiaPPAL);
+    width: 50%;
+    margin: 0 10px 0 0;
+    display: flex;
+    overflow: hidden;
+  }
+
+  #MenuInicio {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .ItemInicio a {
+    text-decoration: none;
+    color: var(--ColorTexto);
+    font-size: smaller;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    height: 40px;
+  }
+
+  .ItemInicio a svg {
+    height: 80%;
+  }
+
+
+  .ItemInicio a:hover {
+    background-color: var(--Beige);
+    height: 50px;
+    width: auto;
+    padding: 0 5px;
+    border-radius: 100px;
+  }
+
+  /*Main*/
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ContenedorAbajo {
+    background-color: #f7f1ed65;
+    flex: 1;
+    border-radius: 100px 100px 0 0;
+  }
+
+  /*mas buscados*/
+
+  .conttitulo {
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .titulomasbuscados {
+    font-size: small;
+    font-family: var(--tipografiaPPAL);
+    color: var(--ColorTexto);
+    font-weight: 600;
+    margin: 2rem;
+    width: 12rem;
+  }
+
+  #masbuscados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 0 0 100px 100px;
+    margin-top: 0;
+
+  }
+
+  .contenedorlibro {
+    width: 100px;
+    background-color: var(--Claro);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px var(--Crema);
+    text-align: center;
+    padding: 1px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contenedorimg {
+    position: relative;
+    width: 80px;
+    height: 130px;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .contenedorimg:hover {
+    box-shadow: 0 2px 6px var(--Crema);
+  }
+
+  .imglibro {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    transform-origin: center center;
+  }
+
+  .imglibro:hover {
+    transform: scale(1.1);
+
+  }
+
+  .titulolibro {
+    font-size: small;
+    font-family: var(--tipografiaPPAL);
+    font-weight: 600;
+    margin: 5px;
+  }
+
+  .autor {
+    font-size: x-small;
+    font-family: var(--tipografiaPPAL);
+    font-weight: 500;
+    margin: 5px;
+  }
+
+  .escuelalibro {
+    font-size: xx-small;
+    font-family: var(--tipografiaPPAL);
+    font-weight: 600;
+    margin: 5px;
+  }
+
+  #deInteres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 0 0 100px 100px;
+    margin-top: 0;
+
+  }
+
+
+  /*Escuelas*/
+
+  .tituloescuela {
+    padding: 1rem;
+    font-family: var(--tipografiaPPAL);
+    color: var(--ColorTexto);
+    font-size: small;
+    font-weight: 600;
+    margin: 2rem auto 1rem 2rem;
+    height: 30px;
+  }
+
+  #escuelas {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(50px, 1fr));
+    gap: 0.5rem;
+    height: auto;
+    width: 100%;
+    justify-content: space-evenly;
+
+  }
+
+  .contescuelas {
+    background-color: var(--Claro);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px var(--Crema);
+    transition: transform 0.3s ease;
+    margin: 0.2rem 2rem;
+  }
+
+  .contescuelas:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--Canela);
+  }
+
+  .tituloescuelas {
+    font-size: small;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--ColorTexto);
+    font-family: var(--tipografiaPPAL);
+  }
+
+  .descrescuelas {
+    color: var(--ColorTexto);
+    line-height: 1.1;
+    font-family: var(--tipografiaPPAL);
+    font-size: small;
+  }
+}
